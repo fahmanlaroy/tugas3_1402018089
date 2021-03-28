@@ -1,0 +1,60 @@
+<html>
+<head>
+<title> 3D Kalkulator </title>
+<script language="javascript">
+function periksarumus(){
+var rumus= document.getElementById("formrumus").pilihan1.value;
+
+
+if (rumus=="rumus1")
+{
+var nilai=prompt("Masukkan jari-jari silinder!!!");
+nilai=parseInt(nilai);
+jari=nilai*nilai
+var nilai4=prompt("Masukkan tinggi silinder!!!");
+nilai4=parseInt(nilai4);
+nilai2=22/7
+nilai3=jari*22/7
+document.write ("<h1> Menampilkan Rumus </h1>");
+document.write ("Volume silinder adalah = "+ nilai4*nilai3*4 +" dan Luas Permukaan silinder adalah = "+ 2*jari*nilai2+2*nilai2*nilai*nilai4);
+}
+else if (rumus=="rumus2")
+{
+var nilai=prompt("Masukkan jari-jari bola!!!");
+nilai=parseInt(nilai);
+nilai2=22/7
+nilai3=(nilai*nilai)*22/7
+document.write ("<h1> Menampilkan Rumus </h1>");
+document.write ("Luas Permukaan Bola adalah = "+ nilai3*4 +" dan Volume Bola adalah = "+ nilai3*1.3);
+}
+else if (rumus=="rumus3")
+{
+var nilai=prompt("Masukkan jari-jari kerucut!!!");
+nilai=parseInt(nilai);
+jari=nilai*nilai
+var nilai2=prompt("Masukkan Tinggi Kerucut!!!");
+nilai2=parseInt(nilai2);
+nilai3=22/7
+hasil=22/7*(jari*nilai2)
+document.write ("<h1> Menampilkan Rumus </h1>");
+document.write ("Volume Kerucut adalah = "+ 1/3*(hasil) +" dan Luas Permukaan kerucut adalah = "+ nilai3*7+nilai+nilai2);
+}
+
+
+}
+</script>
+</head>
+<body font style="arial">
+<form id="formrumus" name="formrumus" onsubmit="return false">
+  <h1> Kalkulator 3D </h1>
+  Pilih Rumus : <select id="pilihan1" name="pilihan1">
+<option value="rumus1"> Silinder </option>
+<option value="rumus2"> Bola </option>
+<option value="rumus3"> Kerucut</option>
+</select>
+</form> 
+<input type='button' onclick="periksarumus()" value='Hitung'>
+
+
+</body>
+</html>
